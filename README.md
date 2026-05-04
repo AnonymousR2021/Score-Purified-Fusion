@@ -3,6 +3,9 @@ Our work is based on GeminiFusion for Multimodal Segmentation on NYUDv2 and SUN 
 
 We adopt the Swin-Large (window size = 12) backbone for feature extraction.
 
+Our model is ./models/swin_transformer_our_46.3.py, the ./models/swin_transformer.py is the original GeminiFusion method.
+
+Training:
 CUDA_VISIBLE_DEVICES=0,1,2 \
 python -m torch.distributed.launch --nproc_per_node=3 --use_env main.py \
 --backbone swin_large_window12 \
